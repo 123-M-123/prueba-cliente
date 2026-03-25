@@ -17,23 +17,23 @@ type Producto = {
 type ItemCarrito = Producto & { cantidad: number }
 
 const C = {
-  olive:      '#7b833a',
-  oliveLight: '#979c53',
-  oliveDark:  '#4c522b',
-  gold:       '#fffb28',
-  goldLight:  '#c7ab5e',
-  goldPale:   '#f5edd8',
-  purple:     '#7201ce',
-  purpleLight:'#7c42fa',
-  purplePale: '#f0edf8',
-  tan:        '#775418',
-  tanLight:   '#e7bd7a',
-  tanPale:    '#F7F0E6',
+  olive:      '#6B6B6B',
+  oliveLight: '#8A8A8A',
+  oliveDark:  '#4A4A4A',
+  gold:       '#9E9E9E',
+  goldLight:  '#BDBDBD',
+  goldPale:   '#F5F5F5',
+  purple:     '#757575',
+  purpleLight:'#9E9E9E',
+  purplePale: '#F0F0F0',
+  tan:        '#8D8D8D',
+  tanLight:   '#B0B0B0',
+  tanPale:    '#F7F7F7',
   white:      '#FFFFFF',
-  offWhite:   '#99783f',
-  dark:       '#2C2A24',
-  gray:       '#6B6861',
-  grayLight:  '#EDE8DF',
+  offWhite:   '#F2F2F2',
+  dark:       '#2C2C2C',
+  gray:       '#6B6B6B',
+  grayLight:  '#E0E0E0',
 } as const
 
 const formatARS = (n: number) =>
@@ -175,41 +175,40 @@ export default function Home() {
           {/* REDES — izquierda */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <a
-              href="https://www.instagram.com/me_ra_k_i?igsh=Z2Yydnk1cmVraW1s"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: C.tanLight, display: 'flex', alignItems: 'center' }}
+              href="#"
+              style={{ color: C.tanLight, display: 'flex', alignItems: 'center', gap: '0.3rem', textDecoration: 'none', fontSize: '0.75rem' }}
             >
-              <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                 <circle cx="12" cy="12" r="4"/>
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
+              <span>Tu Instagram</span>
             </a>
             <a
-              href="https://wa.me/5491168075600"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: C.tanLight, display: 'flex', alignItems: 'center' }}
+              href="#"
+              style={{ color: C.tanLight, display: 'flex', alignItems: 'center', gap: '0.3rem', textDecoration: 'none', fontSize: '0.75rem' }}
             >
-              <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L.057 23.428a.75.75 0 0 0 .915.915l5.571-1.476A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 0 1-4.953-1.354l-.355-.211-3.667.971.988-3.607-.231-.371A9.725 9.725 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
               </svg>
+              <span>Tu WhatsApp</span>
             </a>
           </div>
 
           {/* LOGO — centro absoluto */}
           <div style={{
-            position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
+            position: 'absolute', left: '50%', transform: 'translateX(-50%)',
+            background: C.grayLight, borderRadius: 8,
+            padding: '0.4rem 1.2rem',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            minWidth: 140, height: 44,
           }}>
-            <Image
-              src="/uploads/imagenes/logo.png"
-              alt="Meraki Bijú"
-              width={240}
-              height={96}
-              style={{ objectFit: 'contain', display: 'block' }}
-            />
+            <span style={{
+              color: C.dark, fontWeight: 700, fontSize: '0.85rem',
+              letterSpacing: '0.08em', textTransform: 'uppercase',
+            }}>ACÁ TU LOGO</span>
           </div>
 
           {/* CARRITO — derecha */}
@@ -217,8 +216,8 @@ export default function Home() {
             onClick={() => setCarritoOpen(true)}
             style={{
               position: 'relative', background: 'transparent',
-              border: `1.5px solid ${C.gold}`, borderRadius: 8,
-              padding: '0.4rem 0.9rem', color: C.gold, cursor: 'pointer',
+              border: `1.5px solid ${C.grayLight}`, borderRadius: 8,
+              padding: '0.4rem 0.9rem', color: C.grayLight, cursor: 'pointer',
               display: 'flex', alignItems: 'center', gap: '0.4rem',
               fontSize: '0.85rem', fontWeight: 600,
             }}
@@ -227,14 +226,14 @@ export default function Home() {
             {cantidadCarrito > 0 && (
               <span style={{
                 position: 'absolute', top: -8, right: -8,
-                background: C.purple, color: '#fff', borderRadius: '50%',
+                background: C.gray, color: '#fff', borderRadius: '50%',
                 width: 20, height: 20, fontSize: '0.7rem', fontWeight: 700,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}>{cantidadCarrito}</span>
             )}
             <span>Carrito</span>
             {cantidadCarrito > 0 && (
-              <span style={{ color: C.purpleLight, fontSize: '0.75rem' }}>{formatARS(totalCarrito)}</span>
+              <span style={{ color: C.goldLight, fontSize: '0.75rem' }}>{formatARS(totalCarrito)}</span>
             )}
           </button>
 
@@ -243,25 +242,18 @@ export default function Home() {
 
       {/* HERO */}
       <section style={{
-        background: `linear-gradient(135deg, ${C.oliveDark} 0%, ${C.tan} 100%)`,
+        background: `linear-gradient(135deg, ${C.oliveDark} 0%, ${C.olive} 50%, ${C.tan} 100%)`,
         padding: '3rem 1.5rem', textAlign: 'center',
       }}>
-        <p style={{ color: C.goldLight, fontSize: '1.5rem', letterSpacing: '0.25em', textTransform: 'uppercase', margin: '0 0 0.5rem' }}>
-          Producto 100% artesanal
-        </p>
-        <p style={{ color: C.goldLight, fontSize: '0.90rem', letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 0.5rem' }}>
-          cada diseño está tejido a mano con hilos de calidad.
-        </p>
-        <p style={{ color: C.goldLight, fontSize: '0.70rem', letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 1rem' }}>
-          pensado para que una pieza original, única y especial.
+        <p style={{ color: C.goldLight, fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 0.5rem' }}>
+          Tené online y actualizada tu tienda de e-commerce con carrito de compras
         </p>
         <h2 style={{ color: C.white, fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', fontWeight: 800, margin: '0 0 0.75rem' }}>
-          Bijutería con Alma
+          Integración API con MercadoPago
         </h2>
         <p style={{ color: C.tanLight, fontSize: '1rem', maxWidth: 500, margin: '0 auto', lineHeight: 1.6 }}>
-          ¨Meraki¨ es una palabra griega que significa hacer algo con pasión, amor, creatividad y alma,
-          dejando una huella personal y positiva en todo lo que se hace. Esto es lo que quiero trasmitir
-          con mis creaciones. La creatividad es parte de mi esencia y la artesanía es parte de mi vida.
+          Tu tienda online lista para vender. Carrito de compras, filtros por categoría
+          y pago integrado con Mercado Pago. Sin complicaciones.
         </p>
       </section>
 
@@ -270,7 +262,7 @@ export default function Home() {
 
         {/* Filtro categoría */}
         <div style={{ marginBottom: '1rem' }}>
-          <p style={{ fontSize: '1.5rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: C.dark, marginBottom: '0.6rem' }}>
+          <p style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: C.gray, marginBottom: '0.6rem' }}>
             Categoría
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -286,10 +278,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Filtro etiqueta — solo aparece cuando hay una categoría seleccionada */}
+        {/* Filtro etiqueta */}
         {categoriaActiva !== 'Todos' && etiquetas.length > 2 && (
           <div style={{ marginBottom: '1.75rem' }}>
-            <p style={{ fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: C.dark, marginBottom: '0.6rem' }}>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: C.gray, marginBottom: '0.6rem' }}>
               Estilo
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
@@ -311,7 +303,7 @@ export default function Home() {
           <div style={{ textAlign: 'center', padding: '4rem' }}>
             <div style={{
               width: 48, height: 48,
-              border: `3px solid ${C.grayLight}`, borderTop: `3px solid ${C.gold}`,
+              border: `3px solid ${C.grayLight}`, borderTop: `3px solid ${C.gray}`,
               borderRadius: '50%', animation: 'spin 0.8s linear infinite', margin: '0 auto 1rem',
             }} />
             <p style={{ color: C.gray }}>Cargando productos…</p>
@@ -365,7 +357,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer style={{ background: C.dark, color: C.tanLight, textAlign: 'center', padding: '2rem 1.5rem', marginTop: '3rem' }}>
         <p style={{ margin: 0, fontSize: '0.85rem' }}>
-          <span style={{ color: C.gold, fontWeight: 700 }}>Meraki Bijú</span> — Hecho con amor
+          <span style={{ color: C.goldLight, fontWeight: 700 }}>Marcos Marti Web Design</span> — Consulta planes para micro emprendedores
         </p>
         <p style={{ margin: '0.4rem 0 0', fontSize: '0.75rem', opacity: 0.5 }}>
           © {new Date().getFullYear()} Todos los derechos reservados
@@ -430,7 +422,7 @@ export default function Home() {
             <div style={{
               padding: '1.25rem 1.5rem', borderBottom: `1px solid ${C.grayLight}`,
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              background: C.purple,
+              background: C.oliveDark,
             }}>
               <h3 style={{ margin: 0, color: C.white, fontSize: '1.1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <IconCarrito size={18} /> Carrito ({cantidadCarrito})
@@ -463,7 +455,7 @@ export default function Home() {
                       <p style={{ margin: '0 0 0.2rem', fontSize: '0.82rem', fontWeight: 600, color: C.dark, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                         {item.titulo}
                       </p>
-                      <p style={{ margin: 0, fontSize: '0.78rem', color: C.purple, fontWeight: 700 }}>
+                      <p style={{ margin: 0, fontSize: '0.78rem', color: C.olive, fontWeight: 700 }}>
                         {formatARS(item.precio)}
                       </p>
                     </div>
@@ -485,11 +477,11 @@ export default function Home() {
               <div style={{ padding: '1.25rem 1.5rem', borderTop: `1px solid ${C.grayLight}`, background: C.tanPale }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                   <span style={{ fontWeight: 700, color: C.dark }}>Total</span>
-                  <span style={{ fontSize: '1.2rem', fontWeight: 800, color: C.purple }}>{formatARS(totalCarrito)}</span>
+                  <span style={{ fontSize: '1.2rem', fontWeight: 800, color: C.olive }}>{formatARS(totalCarrito)}</span>
                 </div>
                 <button onClick={handleComprar} disabled={procesando} style={{
                   width: '100%', padding: '0.9rem',
-                  background: procesando ? C.gray : C.purple,
+                  background: procesando ? C.gray : C.olive,
                   border: 'none', borderRadius: 10, color: C.white,
                   fontWeight: 800, fontSize: '1rem', cursor: procesando ? 'not-allowed' : 'pointer',
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
@@ -512,7 +504,7 @@ export default function Home() {
       {notif && (
         <div style={{
           position: 'fixed', bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)',
-          background: C.oliveDark, color: C.gold, padding: '0.6rem 1.4rem',
+          background: C.dark, color: C.goldLight, padding: '0.6rem 1.4rem',
           borderRadius: 30, fontSize: '0.85rem', fontWeight: 600,
           zIndex: 200, boxShadow: '0 4px 20px rgba(0,0,0,0.25)', whiteSpace: 'nowrap',
         }}>
@@ -526,7 +518,7 @@ export default function Home() {
 const btnQtyStyle: React.CSSProperties = {
   width: 26, height: 26,
   display: 'flex', alignItems: 'center', justifyContent: 'center',
-  background: '#fffeec', border: '1px solid #D6D0C4', borderRadius: 6,
+  background: '#F3F0EA', border: '1px solid #D6D0C4', borderRadius: 6,
   cursor: 'pointer', fontSize: '0.9rem', fontWeight: 700, color: '#555', padding: 0,
 }
 
@@ -544,9 +536,9 @@ function ProductCard({ producto, onVerImagen, onAgregar }: ProductCardProps) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
-        background: C.goldLight, borderRadius: 14, overflow: 'hidden',
+        background: C.tanPale, borderRadius: 14, overflow: 'hidden',
         border: `5px solid ${hover ? C.purple : C.grayLight}`,
-        boxShadow: hover ? '0 8px 28px rgba(139,122,184,0.2)' : '0 2px 8px rgba(0,0,0,0.06)',
+        boxShadow: hover ? '0 8px 28px rgba(0,0,0,0.15)' : '0 2px 8px rgba(0,0,0,0.06)',
         transition: 'all 0.25s ease',
         transform: hover ? 'translateY(-3px)' : 'translateY(0)',
         display: 'flex', flexDirection: 'column',
@@ -563,7 +555,7 @@ function ProductCard({ producto, onVerImagen, onAgregar }: ProductCardProps) {
         />
         <span style={{
           position: 'absolute', top: 8, left: 8,
-          background: 'rgba(44,42,36,0.72)', color: '#e0c47a',
+          background: 'rgba(44,42,36,0.72)', color: '#e0e0e0',
           fontSize: '0.65rem', fontWeight: 600, padding: '0.2rem 0.55rem',
           borderRadius: 12, letterSpacing: '0.06em',
         }}>{producto.etiqueta}</span>
