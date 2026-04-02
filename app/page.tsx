@@ -158,7 +158,16 @@ export default function Home() {
   }
 
   return (
-    <div suppressHydrationWarning style={{ minHeight: '100vh', backgroundColor: C.offWhite }}>
+    <div
+      suppressHydrationWarning
+      style={{
+        minHeight: '100vh',
+        backgroundClip: 'unset',
+        WebkitBackgroundClip: 'unset',
+        color: 'rgba(0, 0, 0, 0)',
+        backgroundColor: 'var(--color-blue-600)',
+      }}
+    >
 
       {/* HEADER */}
       <header style={{
@@ -329,7 +338,7 @@ export default function Home() {
 
         {/* Grilla */}
         {!cargando && !errorMsg && (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '1.5rem' }}>
             {productosFiltrados.map(p => (
               <ProductCard
                 key={p.id_producto}
