@@ -165,7 +165,7 @@ export default function Home() {
         backgroundClip: 'unset',
         WebkitBackgroundClip: 'unset',
         color: 'rgba(0, 0, 0, 0)',
-        backgroundColor: 'var(--color-blue-600)',
+        backgroundColor: 'transparent',
       }}
     >
 
@@ -182,11 +182,11 @@ export default function Home() {
         }}>
 
           {/* REDES — izquierda */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div className="social-links">
             <a
-              href="#"
-              style={{ color: C.tanLight, display: 'flex', alignItems: 'center', gap: '0.3rem', textDecoration: 'none', fontSize: '0.75rem' }}
-            >
+    href="#"
+    style={{ color: C.tanLight, display: 'flex', alignItems: 'center', gap: '0.3rem', textDecoration: 'none', fontSize: '0.75rem' }}
+  >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                 <circle cx="12" cy="12" r="4"/>
@@ -241,9 +241,7 @@ export default function Home() {
               }}>{cantidadCarrito}</span>
             )}
             <span>Carrito</span>
-            {cantidadCarrito > 0 && (
-              <span style={{ color: C.goldLight, fontSize: '0.75rem' }}>{formatARS(totalCarrito)}</span>
-            )}
+          
           </button>
 
         </div>
@@ -255,15 +253,23 @@ export default function Home() {
         padding: '3rem 1.5rem', textAlign: 'center',
       }}>
         <p style={{ color: C.goldLight, fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 0.5rem' }}>
-          Tené online y actualizada tu tienda de e-commerce con carrito de compras
+          ¿Querés tener online y actualizada tu tienda de e-commerce con carrito de compras?
         </p>
         <h2 style={{ color: C.white, fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', fontWeight: 800, margin: '0 0 0.75rem' }}>
           Integración API con MercadoPago
         </h2>
+<p style={{ color: C.goldLight, fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 0.5rem' }}>
+         Sin gastos fijos de mantenimiento como en TIENDA-NUBE, EMPRE-TIENDA, ni hablar de SHOPIFY (en Dolares Cash)
+        </p>
+
         <p style={{ color: C.tanLight, fontSize: '1rem', maxWidth: 500, margin: '0 auto', lineHeight: 1.6 }}>
           Tu tienda online lista para vender. Carrito de compras, filtros por categoría
-          y pago integrado con Mercado Pago. Sin complicaciones.
+         Sin complicaciones.
         </p>
+<h2 style={{ color: C.white, fontSize: 'clamp(1.0rem, 3vw, 1.8rem)', fontWeight: 400, margin: '0 0 0.75rem' }}>
+          Abonas la creacion una sola vez, y si no modificas tu catálogo de productos, precios, imágenes, etc. Te olvidas de los gastos fijos.  
+        </h2>
+
       </section>
 
       {/* MAIN */}

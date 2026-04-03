@@ -75,6 +75,24 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
+/* Redes sociales */
+.social-links {
+  display: flex;
+  flex-direction: row;      /* por defecto en desktop: fila */
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 16px;
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column; /* en mobile: columna */
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 8px;
+  }
+}
 
 @layer base {
   * {
