@@ -248,29 +248,50 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section style={{
-        background: `linear-gradient(135deg, ${C.oliveDark} 0%, ${C.olive} 50%, ${C.tan} 100%)`,
-        padding: '3rem 1.5rem', textAlign: 'center',
-      }}>
-        <p style={{ color: C.goldLight, fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 0.5rem' }}>
-          ¿Querés tener online y actualizada tu tienda de e-commerce con carrito de compras?
-        </p>
-        <h2 style={{ color: C.white, fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', fontWeight: 800, margin: '0 0 0.75rem' }}>
-          Integración API con MercadoPago
-        </h2>
-<p style={{ color: C.goldLight, fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 0.5rem' }}>
-         Sin gastos fijos de mantenimiento como en TIENDA-NUBE, EMPRE-TIENDA, ni hablar de SHOPIFY (en Dolares Cash)
-        </p>
+      <section className="hero" style={{
+  background: "linear-gradient(135deg, var(--color-gray-dark) 0%, var(--color-gray) 50%, var(--color-black) 100%)",
+  padding: "3rem 1.5rem",
+  textAlign: "center"
+}}>
+  <p className="text-claim text-gray-light">
+    ¿Querés tener online y actualizada tu tienda de e-commerce con carrito de compras?
+  </p>
 
-        <p style={{ color: C.tanLight, fontSize: '1rem', maxWidth: 500, margin: '0 auto', lineHeight: 1.6 }}>
-          Tu tienda online lista para vender. Carrito de compras, filtros por categoría
-         Sin complicaciones.
-        </p>
-<h2 style={{ color: C.white, fontSize: 'clamp(1.0rem, 3vw, 1.8rem)', fontWeight: 400, margin: '0 0 0.75rem' }}>
-          Abonas la creacion una sola vez, y si no modificas tu catálogo de productos, precios, imágenes, etc. Te olvidas de los gastos fijos.  
-        </h2>
+  <h2 className="text-hero text-white">
+    Integración API con MercadoPago
+  </h2>
 
-      </section>
+  <p className="text-claim text-gray-light">
+    Sin gastos fijos de mantenimiento como en TIENDA-NUBE, EMPRE-TIENDA.. (ver cuadro comparativo abajo)
+  </p>
+
+  <p className="text-subtitle text-gray-light">
+    Ni hablar de SHOPIFY (en Dólares Cash)
+  </p>
+
+  <p className="text-body text-gray-light">
+    CON NOSOTROS tu tienda online lista para vender.
+
+    Carrito de compras, filtros por categoría.
+
+    Sin complicaciones... Y SIN GASTOS FIJOS
+  </p>
+
+  <h2 className="text-subtitle text-white">
+    Abonás la creación una sola vez.
+  </h2>
+
+  <h2 className="text-subtitle text-white">
+    Incluso si usas un sub-Dominio como este ES LIBRE Y GRATIS (no es limpio .com)
+  </h2>
+
+  <p className="text-body text-gray-light">
+    Si no modificás tu catálogo de productos, precios, imágenes, te olvidás de los gastos fijos.
+    Pero también se puede pactar la modificación puntual, o incluso implementar una auto-gestión
+    mediante planilla Excel de Google.
+  </p>
+</section>
+
 
       {/* MAIN */}
       <main style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem 1.5rem' }}>
